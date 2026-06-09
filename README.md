@@ -1,7 +1,7 @@
 # MVSCD
 Multi-View Self-Consistency Decoding for Ancient Stele Inscriptions OCR
 # Environment
-PyTorch == 1.7
+PyTorch == 1.7 \
 transformers == 4.57.6
 # Data Preparation
 Before OCR evaluation, all images are preprocessed through a two-stage segmentation pipeline based on the **CRAFT** text detector.
@@ -124,3 +124,19 @@ pretrained_models/chinese-clip-vit-huge-patch14
 ```
 
 # How To Test
+
+After completing data preprocessing and downloading all pretrained models, modify the corresponding model and dataset paths in `LLM_agent.py`, then run:
+
+```bash
+python LLM_agent.py
+```
+
+MVSCD will automatically perform:
+
+- OCR candidate generation
+- Multi-view consistency decoding
+- Visual-semantic matching
+- Linguistic verification
+- Final transcription generation
+
+The recognition results will be saved to the output directory specified in `LLM_agent.py`.
