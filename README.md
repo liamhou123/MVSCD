@@ -58,26 +58,4 @@ The official CRAFT implementation can be found at:
 
 https://github.com/clovaai/CRAFT-pytorch
 
----
-
-### Dataset Structure
-
-The recommended dataset organization is:
-
-```text
-data/
-├── raw_images/
-│   ├── img_0001.jpg
-│   ├── img_0002.jpg
-│   └── ...
-│
-├── columns/
-│
-├── characters/
-│
-└── labels/
-    ├── img_0001.txt
-    ├── img_0002.txt
-    └── ...
-```
 # How To Test
